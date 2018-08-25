@@ -23,7 +23,7 @@
           <a href="#">Карта штата</a>
         </li>
         <li class="site-navigation-current">
-          <a>Гостиницы </a>
+          <a>Гостиницы</a>
         </li>
       </ul>
     </nav>
@@ -32,15 +32,138 @@
     <section class="filters">
       <h2 class="visually-hidden">Фильтр гостиниц</h2>
 
-      <!-- Здесь будет форма фильтра -->
+      <form class="filter" method="get" action="https://echo.htmlacademy.ru/" oninput="#">
+        <fieldset>
+          <legend>
+            Инфаструктура
+          </legend>
+          <ul>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
+                <label for="filter-pool">
+              Бассейн
+                </label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
+                <label for="filter-parking">
+              Парковка
+                </label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wifi" id="filter-wifi">
+                <label for="filter-wifi">
+              WI-FI
+                </label>
+            </li>
+          </ul>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            Тип жилья
+          </legend>
+          <ul>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel " id="filter-hotel" checked>
+                <label for="filter-hotel">
+              Гостиница
+                </label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
+                <label for="filter-motel">
+              Мотель
+                </label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
+                <label for="filter-apartments">
+              Апартаменты
+                </label>
+            </li>
+          </ul>
+
+        </fieldset>
+        <fieldset>
+          <legend>
+            Стоимость в сутки (Р)
+          </legend>
+
+            <div class="filter-interval">
+              <label>
+                От
+                <input type="number" name="min-interval" value="0">
+              </label>
+              <label>
+                До
+                <input type="number" name="max-interval" value="3000">
+              </label>
+            </div>
+
+            <div class="filter-form">  <!--контейнеры для визуальной состовляющей кнопки выбора диапозона -->
+              <div class="filter-range-wrapper">
+                <div class="filter-range">
+                  <div class="filter-range-scale">
+                    <div class="filter-range-bar">
+                    </div>
+                  </div>
+
+                <button class="filter-range-handle min">
+                </button> <!-- ползунок-->
+                <button class="filter-range-handle max">
+                </button> <!-- ползунок-->
+                </div>
+              </div>
+            </div>
+
+        </fieldset>
+
+        <button type="submit" class="filet-button button"> Показать </button>
+
+      </form>
 
     </section>
+
     <section class="sorting">
-      <h2 class="visually-hidden">Сортировка</h2>
-      <!-- Размечаю после 4 лекции  -->
+      <form class="filter" method="get" action="https://echo.htmlacademy.ru/">
+        <fieldset>
+          <legend>
+            Сортировка по:
+          </legend>
+
+          <ul>
+
+            <li class="filter-radio">
+              <label> По цене
+              <input class="visually-hidden radio-switch" type="radio" name="sorting-iten">
+            </label>
+            </li>
+
+            <li class="filter-radio">
+              <label>По типу
+              <input class="visually-hidden radio-switch" type="radio" name="sorting-iten" tabindex="0">
+            </label>
+            </li>
+
+            <li class="filter-radio">
+              <label>По рейтингу
+              <input class="visually-hidden radio-switch" type="radio" name="sorting-iten" tabindex="0">
+              </label>
+            </li>
+
+          </ul>
+          <p>
+            Найдено:
+            <output name="resultoutput">
+          </p>
+        </fieldset>
+      </form>
+
     </section>
     <section class="catalog">
-      <h2 class="visually-hidden">Каталого гостиниц</h2>
+      <h2 class="visually-hidden">Каталог гостиниц</h2>
       <ul class="catalog-list">
         <li class="catalog-item">
           <h3>
