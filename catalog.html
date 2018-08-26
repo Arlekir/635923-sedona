@@ -121,45 +121,35 @@
         </fieldset>
 
         <button type="submit" class="filet-button button"> Показать </button>
-
       </form>
-
     </section>
 
     <section class="sorting">
-      <form class="filter" method="get" action="https://echo.htmlacademy.ru/">
-        <fieldset>
-          <legend>
-            Сортировка по:
-          </legend>
-
-          <ul>
-
-            <li class="filter-radio">
-              <label> По цене
-              <input class="visually-hidden radio-switch" type="radio" name="sorting-iten">
-            </label>
-            </li>
-
-            <li class="filter-radio">
-              <label>По типу
-              <input class="visually-hidden radio-switch" type="radio" name="sorting-iten" tabindex="0">
-            </label>
-            </li>
-
-            <li class="filter-radio">
-              <label>По рейтингу
-              <input class="visually-hidden radio-switch" type="radio" name="sorting-iten" tabindex="0">
-              </label>
-            </li>
-
-          </ul>
-          <p>
-            Найдено:
-            <output name="resultoutput">
-          </p>
-        </fieldset>
-      </form>
+      <div class="sorting-results-left">
+        <p>
+          Найдено: 3
+        </p>
+      </div>
+      <div class="sorting-results-center">
+        <ul>
+          <li>
+            Сортировка
+          </li>
+          <li class="sorting-results-active">
+            <a href="#"> По цене</a>
+          </li>
+          <li class="sorting-results-active">
+              <a  href="#"> По типу</a>
+          </li>
+          <li class="sorting-results-active">
+            <a  href="#">По рейтингу</a>
+          </li>
+        </ul>
+      </div>
+      <div class="sorting-results-right">      <!-- контейнер для стрелочек -->
+        <a class="arrow-icon-down" href="#"> </a>
+        <a class="arrow-icon-up" href="#"> </a>
+      </div>
 
     </section>
     <section class="catalog">
@@ -238,18 +228,18 @@
     <div class="footer-social">
       <ul>
         <li>
-          <a class="social-button" href="#">Twitter</a>
+          <a class="social-button" href="#"><span class="visually-hidden">Подписывайтесь в Twitter!</span></a>
         </li>
         <li>
-          <a class="social-button" href="#">Фейсбук</a>
+          <a class="social-button" href="#"><span class="visually-hidden">Присоединяйтесь в Facebook</span></a>
         </li>
         <li>
-          <a class="social-button" href="#">Youtube</a>
+          <a class="social-button" href="#"><span class="visually-hidden">Смотрите нас на Youtube</span></a>
         </li>
       </ul>
     </div>
     <p class="footer-copyright">
-      <a href="https://up.htmlacademy.ru/htmlcss/22"> Разработано HTML Academy</a>
+      <a href="https://up.htmlacademy.ru/htmlcss/22"><span class="visually-hidden">Разработано HTML Academy</span></a>
     </p>
   </footer>
 </body>
