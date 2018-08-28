@@ -116,40 +116,40 @@
 
       <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
         <p class="appointment-item">
-          <label>Дата заезда:
-            <input type="text" name="arrival" value="" placeholder="24 апреля 2017">
+          <label for="appointment-form-arrival">Дата заезда:</label>
+            <input type="text" name="arrival" value="" placeholder="24 апреля 2017" id="appointment-form-arrival">
             <button class="icon-calendar" type="button">
-              <span class="visually-hidden"> Выберети даты заезда </span>
+              <span class="visually-hidden"> Выберите даты заезда </span>
                 <!--  Тут будет СВГ иконка, просто скопировать не получилось -->
             </button>
-          </label>
         </p>
         <p class="appointment-item">
-          <label>Дата выезда:
-            <input type="text" name="departure" value="" placeholder="4 июля 2017">
+          <label for="appointment-form-departure">Дата выезда:</label>
+            <input type="text" name="departure" value="" placeholder="4 июля 2017" id="appointment-form-departure">
             <button class="icon-calendar" type="button">
-              <span class="visually-hidden"> Выберети даты выезда </span>
+              <span class="visually-hidden"> Выберите даты выезда </span>
                 <!--  Тут будет СВГ иконка, просто скопировать не получилось -->
             </button>
-          </label>
         </p>
         <p class="appointment-item">
-          <label>Взрослые:
-            <span class="visually-hidden">Уменьшаем количество взрослых</span>
-            <button class="btn-minus-icon" type="button"></button>
-            <input type="text" name="adults" value="" placeholder="2">
-            <span class="visually-hidden">Увеличиваем количество взрослых</span>
-            <button class="btn-plus-icon" type="button"></button>
-          </label>
+          <label for="appointment-form-adults">Взрослые:</label>
+            <button class="btn-minus-icon" type="button">
+              <span class="visually-hidden">Уменьшаем количество взрослых</span>
+            </button>
+            <input type="text" name="adults" value="" placeholder="2" id="appointment-form-adults">
+            <button class="btn-plus-icon" type="button">
+              <span class="visually-hidden">Увеличиваем количество взрослых</span>
+            </button>
         </p>
         <p class="appointment-item">
-          <label>Дети:
-            <span class="visually-hidden">Уменьшаем количество детей</span>
-            <button class="btn-minus-icon" type="button"></button>
-            <input type="text" name="children" value="" placeholder="0">
-            <span class="visually-hidden">Увеличиваем количество детей</span>
-            <button class="btn-plus-icon" type="button"></button>
-          </label>
+          <label for="appointment-form-children">Дети:</label>
+            <button class="btn-minus-icon" type="button">
+              <span class="visually-hidden">Уменьшаем количество детей</span>
+            </button>
+            <input type="text" name="children" value="" placeholder="0" id="appointment-form-children">
+            <button class="btn-plus-icon" type="button">
+              <span class="visually-hidden">Увеличиваем количество детей</span>
+            </button>
         </p>
         <button class="button" type="submit">Найти </button>
       </form>
