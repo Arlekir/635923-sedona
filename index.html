@@ -111,34 +111,44 @@
       <p class="booking-info">
         Укажите предпологаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне.
       </p>
-      <a href="#" class="search-booking"> Поиск гостиниц в Седоне</a>
+      <button type="button" class="search-booking"> Поиск гостиниц в Седоне</button>
 
 
       <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
         <p class="appointment-item">
           <label>Дата заезда:
             <input type="text" name="arrival" value="" placeholder="24 апреля 2017">
-            <span class="icon-calendar"></span>
+            <button class="icon-calendar" type="button">
+              <span class="visually-hidden"> Выберети даты заезда </span>
+                <!--  Тут будет СВГ иконка, просто скопировать не получилось -->
+            </button>
           </label>
         </p>
         <p class="appointment-item">
           <label>Дата выезда:
             <input type="text" name="departure" value="" placeholder="4 июля 2017">
-            <span class="icon-calendar"></span>
+            <button class="icon-calendar" type="button">
+              <span class="visually-hidden"> Выберети даты выезда </span>
+                <!--  Тут будет СВГ иконка, просто скопировать не получилось -->
+            </button>
           </label>
         </p>
         <p class="appointment-item">
           <label>Взрослые:
-            <button class="btn-minus-icon" type="botton"></button>
+            <span class="visually-hidden">Уменьшаем количество взрослых</span>
+            <button class="btn-minus-icon" type="button"></button>
             <input type="text" name="adults" value="" placeholder="2">
-            <button class="btn-plus-icon" type="botton"></button>
+            <span class="visually-hidden">Увеличиваем количество взрослых</span>
+            <button class="btn-plus-icon" type="button"></button>
           </label>
         </p>
         <p class="appointment-item">
           <label>Дети:
-            <button class="btn-minus-icon" type="botton"></button>
+            <span class="visually-hidden">Уменьшаем количество детей</span>
+            <button class="btn-minus-icon" type="button"></button>
             <input type="text" name="children" value="" placeholder="0">
-            <button class="btn-plus-icon" type="botton"></button>
+            <span class="visually-hidden">Увеличиваем количество детей</span>
+            <button class="btn-plus-icon" type="button"></button>
           </label>
         </p>
         <button class="button" type="submit">Найти </button>
