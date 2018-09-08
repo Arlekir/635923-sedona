@@ -4,9 +4,13 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="catalog-page">
+  <div class="general-background">
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo" href="index.html">
@@ -34,8 +38,8 @@
 
       <form class="filter" method="get" action="https://echo.htmlacademy.ru/" oninput="#">
         <fieldset>
-          <legend>
-            Инфаструктура
+          <legend class="name-search">
+            Инфаструктура:
           </legend>
           <ul>
             <li class="filter-option">
@@ -61,8 +65,8 @@
         </fieldset>
 
         <fieldset>
-          <legend>
-            Тип жилья
+          <legend class="name-search">
+            Тип жилья:
           </legend>
           <ul>
             <li class="filter-option">
@@ -87,8 +91,8 @@
 
         </fieldset>
         <fieldset>
-          <legend>
-            Стоимость в сутки (Р)
+          <legend class="name-search">
+            Стоимость в сутки (Р):
           </legend>
 
             <div class="filter-interval">
@@ -120,7 +124,7 @@
 
         </fieldset>
 
-        <button type="submit" class="filet-button button"> Показать </button>
+        <button type="submit" class="filter-button"> Показать </button>
       </form>
     </section>
 
@@ -133,10 +137,10 @@
       <div class="sorting-results-center">
         <ul>
           <li>
-            Сортировка
+            Сортировка:
           </li>
           <li class="sorting-results-active">
-            <a href="#"> По цене</a>
+            <a href="#" class="element-active"> По цене</a>
           </li>
           <li class="sorting-results-active">
               <a  href="#"> По типу</a>
@@ -156,18 +160,18 @@
       <h2 class="visually-hidden">Каталог гостиниц</h2>
       <ul class="catalog-list">
         <li class="catalog-item">
-          <h3>
-            <a href="catalog-item">Amara Resort & Spa </a>
+          <h3 >
+            <a href="catalog-item" class="item-name">Amara Resort & Spa </a>
           </h3>
           <p class="catalog-item-image">
             <a href="catalog-item.html">
                 <img src="img/1-hotel.jpg" alt="Гостиница Amara Resort & Spa" width="135" height="90">
               </a>
           </p>
-          <p>
+          <p class="price-type">
             Гостиница
           </p>
-          <p class="price">
+          <p class="price-type">
             <b> От 4000 ₽.</b>
           </p>
           <a class="detail" href="#">Подробнее</a>
@@ -178,17 +182,17 @@
         </li>
         <li class="catalog-item">
           <h3>
-            <a href="catalog-item">Desert Quail Inn </a>
+            <a href="catalog-item" class="item-name">Desert Quail Inn </a>
           </h3>
           <p class="catalog-item-image">
             <a href="catalog-item.html">
                 <img src="img/2-hotel.jpg" alt="Мотель Desert Quail Inn" width="135" height="90">
               </a>
           </p>
-          <p>
+          <p class="price-type">
             Мотель
           </p>
-          <p class="price">
+          <p class="price-type">
             <b> От 3000 ₽.</b>
           </p>
           <a class="detail" href="#">Подробнее</a>
@@ -199,17 +203,17 @@
         </li>
         <li class="catalog-item">
           <h3>
-            <a href="catalog-item">Villas At Poco Diablo </a>
+            <a href="catalog-item" class="item-name">Villas At Poco Diablo </a>
           </h3>
           <p class="catalog-item-image">
             <a href="catalog-item.html">
                 <img src="img/3-hotel.jpg" alt="Апартаменты Villas At Poco Diablo " width="135" height="90">
               </a>
           </p>
-          <p>
+          <p class="price-type">
             Апартаменты
           </p>
-          <p class="price">
+          <p class="price-type">
             <b> От 2000 ₽.</b>
           </p>
           <a class="detail" href="#">Подробнее</a>
@@ -242,6 +246,7 @@
       <a href="https://up.htmlacademy.ru/htmlcss/22"><span class="visually-hidden">Разработано HTML Academy</span></a>
     </p>
   </footer>
+  </div>
 </body>
 
 </html>

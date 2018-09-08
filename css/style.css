@@ -1,0 +1,327 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+}
+.catalog-page  {
+  color: #000000;
+
+  background-image: url(#);
+  background-position: ;
+  background-repeat: no-repeat;
+}
+a {
+  text-decoration: none;
+}
+.general-background {
+  background-color: #ffffff;
+}
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+.site-navigation {
+  list-style:none;
+}
+.site-navigation a {
+  color: #000000;
+}
+ .site-navigation a:hover
+ /* .site-navigation a:focus */ {
+   color: #81b3d2;
+ }
+ .site-navigation a:active {
+   color: #000000;
+   opacity: 0.3;
+ }
+ .promo {
+   background-image: url(../img/background.jpg);
+   background-repeat: no-repeat;
+   background-position: -56px;
+ }
+ .container .visually,
+ .container .visually-features {
+   text-align: center;
+ }
+
+.features h2 {
+  color: #333333 ;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.item-recommendations {
+  background-color: #ffffff;
+}
+.features-list,
+.features-item-recommendations {
+  list-style: none;
+}
+.features-item,
+.item-recommendations {
+  text-align: center;
+}
+.features-item h3,
+.item-recommendations h4 {
+  font-size: 21px;
+}
+.features-item p,
+.item-recommendations p {
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333 ;
+}
+.booking h2 {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+}
+.booking .booking-info {
+  font-size: 14px;
+  line-height: 24px;
+  color:#333333;
+  text-align: center;
+}
+.button-search {
+  font: inherit;
+
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  border: none;
+  width: 568px;
+  height: 86px;
+  text-decoration: none;
+
+  background-color: #766357;
+}
+.booking .button-search:hover,
+.booking .button-search:focus {
+  background-color: #604e43;
+}
+.booking .button-search:active {
+  background-color: #503e33;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.3);
+}
+.booking .please {
+  font-size: 14px;
+}
+input.input-field {
+  background-color: #f2f2f2;
+  border: none;
+  font-size: 14px;
+  line-height: 26px;
+  width: 346px;
+  height: 38px;
+
+}
+input.input-field:hover {
+  background-color: #ebebeb;
+  border: none;
+}
+input.input-field:focus {
+  background-color: #ffffff;
+
+
+}
+input.input-field::-webkit-input-placeholder {
+    color: #000000;
+    font-weight: 700;
+}
+input.days {
+  width: 114px; /*тут будут иконки и размеры изменю */
+  height: 38px;
+}
+.button-blue {
+  font: inherit;
+  color: #ffffff;
+  background-color: #81b3d2;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  padding: 17px 197px 22px 196px;
+  border: none;
+  text-transform: uppercase;
+}
+.button-blue:hover {
+  background-color: #669ec0;
+}
+.button-blue:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+}
+.filter fieldset {
+  border: none;
+}
+.filter legend {
+  font-size: 16px;
+  line-height: 21px;
+}
+.filter ul {
+  list-style: none;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+form .filter-button {
+  font: inherit;
+  padding: 6px 35px;
+  /* font-size: 14px; */
+  /* line-height: 21px; */
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+form .filter-button:hover{
+  color :#000000;
+  background-color: #ffffff;
+  border: none;
+}
+.sorting-results-left p {
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.sorting-results-center li {
+  font-size:12px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  list-style: none;
+}
+.sorting-results-active a{
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dashed #81b3d2;
+}
+.sorting-results-active a:hover {
+  color: #81b3d2;
+}
+.sorting-results-active a:active {
+  color: #000000;
+  border-bottom: none;
+}
+.sorting-results-active .element-active {
+  color: #81b3d2;
+  border-bottom: none;
+}
+.sorting-results-active .element-active:hover {
+  border-bottom: 1px dashed #81b3d2;
+}
+.sorting-results-active .element-active:active {
+  color: #000000;
+  border-bottom: none;
+}
+.catalog li{
+  list-style: none;
+}
+.catalog .item-name {
+  color: #000000;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.catalog .item-name:hover {
+  color: #81b3d2;
+}
+.catalog .item-name:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+.catalog .price-type {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+}
+.detail {
+  padding: 4px 17px;
+  background-color: #81b3d2;
+  color: #ffffff;
+  border: none;
+}
+.detail:hover {
+  background-color: #669ec0;
+}
+.detail:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+.button {
+  padding: 4px 17px;
+  background-color: #766357;
+  color: #ffffff;
+  border: none;
+}
+.button:hover {
+  background-color: #604e43;
+}
+.button:active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
+}
+.rating {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  width: 110px;
+  height: 27px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+.footer-hashtag {
+  font-size: 21px;
+  line-height: 26px;
+  color:#000000;
+  font-weight: 700;
+  border: none;
+  text-align: center;
+
+
+}
+.footer-social ul {
+  list-style: none;
+  text-align: center;
+}
+
+.social-button {
+  color: #81b3d2;
+}
+
+.social-button:hover {
+  color: #669ec0;
+}
+
+.social-button:active {
+  color: #5496bd;
+}
+.footer-copyright {
+  text-align: center;
+  background-color: #ffffff;
+}
+.footer-copyright a {
+  color: #000000;
+}
+
+.footer-copyright a:hover {
+  color: #81b3d2;
+}
+
+.footer-copyright a:active {
+  color: #bdbbbc;
+}
