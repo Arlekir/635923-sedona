@@ -14,6 +14,16 @@ body {
 a {
   text-decoration: none;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .general-background {
   background-color: #ffffff;
 }
@@ -23,26 +33,33 @@ a {
   font-weight: 700;
   color: #000000;
 
-  background-color: #ffffff;
 }
 .site-navigation {
   list-style:none;
+  padding: 0;
 }
 .site-navigation a {
   color: #000000;
-  text-decoration: none;
+ text-decoration: none;   /*Оставлю обнуление, без него страшно, вдруг все сломается как-нибудь */
 }
- .site-navigation a:hover,
- .site-navigation a:focus {
-   color: #81b3d2;
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: #81b3d2;
  }
- .site-navigation a:active {
-   color: #000000;
-   opacity: 0.3;
+.site-navigation a:active {
+  color: #000000;
+  opacity: 0.3;
  }
- a.current {
-   color: #766357;
-
+.site-navigation a.current {
+  color: #766357;
+}
+.site-navigation a.current:hover,
+.site-navigation a.current:focus {
+  color: #766357;
+   }
+.site-navigation a.current:active {
+  color: #766357;
+  opacity: 1;
  }
  .promo {
    background-image: url(../img/background.jpg);
@@ -56,6 +73,11 @@ a {
    background-color: #303a3c;
    color: #ffffff;
  }
+ .container .visually {
+   font-size: 21px;
+   font-weight: 700;
+   line-height: 26px;
+ }
  .container .visually,
  .container .visually-features {
    text-align: center;
@@ -65,7 +87,7 @@ a {
   color: #333333 ;
   font-size: 14px;
   line-height: 26px;
-  font-weight: 700;
+  font-weight: 400;
 }
 .item-recommendations {
   background-color: #ffffff;
@@ -87,6 +109,7 @@ a {
   font-size: 14px;
   line-height: 21px;
   color: #333333 ;
+  font-weight: 400;
 }
 .search {
   text-align: center;
@@ -115,7 +138,6 @@ a {
   border: none;
   width: 568px;
   height: 86px;
-  text-decoration: none;
 
   background-color: #766357;
 }
@@ -125,7 +147,6 @@ a {
 }
 .booking .button-search:active {
   background-color: #503e33;
-  font-weight: 300;
   color: rgba(255, 255, 255, 0.3);
 }
 .booking .please {
@@ -138,6 +159,7 @@ input.input-field {
   line-height: 26px;
   width: 346px;
   height: 38px;
+  text-transform: uppercase;
 
 }
 input.input-field:hover,
@@ -150,9 +172,12 @@ input.input-field:focus {
 
 
 }
-input.input-field::-webkit-input-placeholder {
-    color: #000000;
-    font-weight: 700;
+.appointment-item .input-field::placeholder {
+  color: #000000;
+  font-weight: 700;
+  opacity: 1;
+}
+
 }
 input.days {
   width: 114px; /*тут будут иконки и размеры изменю */
@@ -163,11 +188,12 @@ input.days {
   color: #ffffff;
   background-color: #81b3d2;
   font-size: 21px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 26px;
-  padding: 17px 197px 22px 196px;
+  padding: 17px 20px 22px 20px;
   border: none;
   text-transform: uppercase;
+  width: 458px;
 }
 .button-blue:hover,
 .button-blue:focus {
@@ -179,6 +205,8 @@ input.days {
 }
 .filter fieldset {
   border: none;
+  margin: 0;
+  padding: 0;
 }
 .filter legend {
   font-size: 16px;
@@ -190,7 +218,7 @@ input.days {
   line-height: 21px;
   font-weight: 400;
 }
-form .filter-button {
+.filter .filter-button {
   font: inherit;
   color: #ffffff;
   padding: 6px 35px;
@@ -201,8 +229,8 @@ form .filter-button {
   border: 2px solid #ffffff;
 
 }
-form .filter-button:hover,
-form .filter-button:focus {
+.filter .filter-button:hover,
+.filter .filter-button:focus {
   color :#000000;
   background-color: #ffffff;
   border: none;
@@ -222,7 +250,7 @@ form .filter-button:focus {
 }
 .sorting-results-active a{
   color: rgba(0, 0, 0, 0.3);
-  border-bottom: 1px dashed #81b3d2;
+  border-bottom: 1px dotted #81b3d2;
   text-decoration: none;
 }
 .sorting-results-active a:hover,
@@ -231,7 +259,7 @@ form .filter-button:focus {
 }
 .sorting-results-active a:active {
   color: #000000;
-  border-bottom: none;
+  border-bottom: 1px dashed transparent;
 }
 .sorting-results-active .element-active {
   color: #81b3d2;
@@ -240,11 +268,10 @@ form .filter-button:focus {
 }
 .sorting-results-active .element-active:hover,
 .sorting-results-active .element-active:focus {
-  border-bottom: 1px dashed #81b3d2;
+  color: #81b3d2;
 }
 .sorting-results-active .element-active:active {
-  color: #000000;
-  border-bottom: none;
+  color: #81b3d2;
 }
 .catalog li{
   list-style: none;
@@ -266,10 +293,11 @@ form .filter-button:focus {
 .catalog .price-type {
   color: #333333;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 21px;
 }
 .detail {
+  line-height: 21px;
   padding: 4px 17px;
   background-color: #81b3d2;
   color: #ffffff;
@@ -300,8 +328,9 @@ form .filter-button:focus {
   color: rgba(255, 255, 255, 0.3);
 }
 .rating {
+  color: #666666;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 21px;
   width: 110px;
   background-color: #f2f2f2;
@@ -341,6 +370,10 @@ form .filter-button:focus {
 .footer-copyright {
   text-align: center;
   background-color: #ffffff;
+}
+.footer-copyright p {
+  font-size: 14px;
+  line-height: 26px;
 }
 .footer-copyright a {
   color: #000000;
