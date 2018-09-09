@@ -11,13 +11,6 @@ body {
 
   background-color: #f2f2f2;
 }
-.catalog-page  {
-  color: #000000;
-
-  background-image: url(#);
-  background-position: ;
-  background-repeat: no-repeat;
-}
 a {
   text-decoration: none;
 }
@@ -37,19 +30,31 @@ a {
 }
 .site-navigation a {
   color: #000000;
+  text-decoration: none;
 }
- .site-navigation a:hover
- /* .site-navigation a:focus */ {
+ .site-navigation a:hover,
+ .site-navigation a:focus {
    color: #81b3d2;
  }
  .site-navigation a:active {
    color: #000000;
    opacity: 0.3;
  }
+ a.current {
+   color: #766357;
+
+ }
  .promo {
    background-image: url(../img/background.jpg);
    background-repeat: no-repeat;
    background-position: -56px;
+ }
+ .promo-catalog {
+   background-image: url(../img/catalog.jpg);
+   background-repeat: no-repeat;
+   background-position: -56px;
+   background-color: #303a3c;
+   color: #ffffff;
  }
  .container .visually,
  .container .visually-features {
@@ -82,6 +87,11 @@ a {
   font-size: 14px;
   line-height: 21px;
   color: #333333 ;
+}
+.search {
+  text-align: center;
+  background-color: #ffffff;
+
 }
 .booking h2 {
   font-size: 30px;
@@ -130,7 +140,8 @@ input.input-field {
   height: 38px;
 
 }
-input.input-field:hover {
+input.input-field:hover,
+input.input-field:focus {
   background-color: #ebebeb;
   border: none;
 }
@@ -158,7 +169,8 @@ input.days {
   border: none;
   text-transform: uppercase;
 }
-.button-blue:hover {
+.button-blue:hover,
+.button-blue:focus {
   background-color: #669ec0;
 }
 .button-blue:active {
@@ -180,15 +192,17 @@ input.days {
 }
 form .filter-button {
   font: inherit;
+  color: #ffffff;
   padding: 6px 35px;
-  /* font-size: 14px; */
-  /* line-height: 21px; */
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+  background: 0 0;
+  border: 2px solid #ffffff;
 
 }
-form .filter-button:hover{
+form .filter-button:hover,
+form .filter-button:focus {
   color :#000000;
   background-color: #ffffff;
   border: none;
@@ -209,8 +223,10 @@ form .filter-button:hover{
 .sorting-results-active a{
   color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dashed #81b3d2;
+  text-decoration: none;
 }
-.sorting-results-active a:hover {
+.sorting-results-active a:hover,
+.sorting-results-active a:focus {
   color: #81b3d2;
 }
 .sorting-results-active a:active {
@@ -219,9 +235,11 @@ form .filter-button:hover{
 }
 .sorting-results-active .element-active {
   color: #81b3d2;
+  text-decoration: none;
   border-bottom: none;
 }
-.sorting-results-active .element-active:hover {
+.sorting-results-active .element-active:hover,
+.sorting-results-active .element-active:focus {
   border-bottom: 1px dashed #81b3d2;
 }
 .sorting-results-active .element-active:active {
@@ -236,8 +254,10 @@ form .filter-button:hover{
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  text-decoration: none;
 }
-.catalog .item-name:hover {
+.catalog .item-name:hover,
+.catalog .item-name:focus {
   color: #81b3d2;
 }
 .catalog .item-name:active {
@@ -254,8 +274,10 @@ form .filter-button:hover{
   background-color: #81b3d2;
   color: #ffffff;
   border: none;
+  text-decoration: none;
 }
-.detail:hover {
+.detail:hover,
+.detail:focus {
   background-color: #669ec0;
 }
 .detail:active {
@@ -267,8 +289,10 @@ form .filter-button:hover{
   background-color: #766357;
   color: #ffffff;
   border: none;
+  text-decoration: none;
 }
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: #604e43;
 }
 .button:active {
@@ -280,9 +304,11 @@ form .filter-button:hover{
   font-weight: 300;
   line-height: 21px;
   width: 110px;
-  height: 27px;
   background-color: #f2f2f2;
   text-align: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+
 }
 .footer-hashtag {
   font-size: 21px;
@@ -301,9 +327,11 @@ form .filter-button:hover{
 
 .social-button {
   color: #81b3d2;
+  text-decoration: none;
 }
 
-.social-button:hover {
+.social-button:hover,
+.social-button:focus {
   color: #669ec0;
 }
 
@@ -316,9 +344,11 @@ form .filter-button:hover{
 }
 .footer-copyright a {
   color: #000000;
+  text-decoration: none;
 }
 
-.footer-copyright a:hover {
+.footer-copyright a:hover,
+.footer-copyright a:focus {
   color: #81b3d2;
 }
 
