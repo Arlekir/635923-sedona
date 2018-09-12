@@ -64,7 +64,7 @@ a {
  .promo {
    background-image: url(../img/background.jpg);
    background-repeat: no-repeat;
-   background-position: -56px;
+   /* background-position: -56px; */
  }
  .promo-catalog {
    background-image: url(../img/catalog.jpg);
@@ -394,7 +394,7 @@ input.days {
 
 
 
- /* СЕТКА */
+ /* СЕТКА header */
 
  .general-background {
   display: block;
@@ -403,7 +403,10 @@ input.days {
   min-width: 768px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 61px;
+
+}
+.main-header {
+  /* margin-bottom: 56px; */
 }
 .main-navigation {
   display: flex;
@@ -414,17 +417,80 @@ input.days {
   width: 138px;
   height: 72px;
   order: 0;
-
+  position: absolute;
 
 }
-.site-navigation
- {
+.site-navigation {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-around;
   margin: 0;
-  padding: 0;
+  padding-left: 0;
   list-style: none;
-  width: 100%;
+  width: 1200px;
+
+}
+.left-column {
+  width: 20%;
+  padding-top:14px;
+  padding-bottom: 15px;
+  text-align: left;
+}
+.indent {
+  margin-right: 20%;
+}
+.right-column {
+  width: 20%;
+  padding-top: 14px;
+  padding-bottom: 15px;
+  text-align: right;
+}
+
+
+
+
+
+/* СЕТКА промо */
+.promo {
+  position: relative;
+  padding-top: 76px;
+  height: 433px;
+  background-size: cover;
+}
+.promo img {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 144px;
+}
+
+
+
+/* СЕТКА причина */
+.cause {
+  padding-top: 62px;
+  padding-bottom: 53px;
+  width: 600px;
+  margin: 0 auto;
+}
+
+
+/* Сетка преимущества */
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.features-item {
+
+}
+.features-item-recommendations {
+  display: flex;
+  flex-wrap:nowrap;
+  align-items: flex-end;
+  min-height: 330px;
+
+}
+.features-item-recommendations li {
+  flex-grow: 1;
+  width: 33%;
 }
