@@ -423,8 +423,6 @@ input.days {
 .site-navigation {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-around;
   margin: 0;
   padding-left: 0;
   list-style: none;
@@ -436,6 +434,8 @@ input.days {
   padding-top:14px;
   padding-bottom: 15px;
   text-align: left;
+  padding-left: 6%;
+  box-sizing: border-box;
 }
 .indent {
   margin-right: 20%;
@@ -445,6 +445,8 @@ input.days {
   padding-top: 14px;
   padding-bottom: 15px;
   text-align: right;
+  padding-right: 6%;
+  box-sizing: border-box;
 }
 
 
@@ -468,29 +470,133 @@ input.days {
 
 /* СЕТКА причина */
 .cause {
-  padding-top: 62px;
-  padding-bottom: 53px;
+  padding-top: 59px;
+  padding-bottom: 50px;
   width: 600px;
   margin: 0 auto;
 }
+.cause .visually,
+.cause .visually-features {
+  margin: 0;
+}
+.cause .visually {
+  margin-bottom: 29px;
+}
 
-
-/* Сетка преимущества */
+/* Сетка преимущества с крупными блоками */
 .features-list {
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
 }
 .features-item {
 
 }
+.features-item-container {
+  display: flex;
+}
+.features-item-text-container {
+  background-color: #81b3d2;
+  color: #ffffff;
+}
+.features-item-text-container h3,
+.features-item-text-container p  {
+  margin: 0;
+}
+.features-item-text-container h3 {
+  padding-top:45px;
+  padding-bottom: 23px;
+}
+.features-item-text-container p {
+  padding-bottom: 23px;
+  color: #ffffff;
+}
+.features-item-text-container p:last-child {
+  padding-bottom: 0px;
+}
+.features-item:nth-child(2) .features-item-text-container {
+  order:2;
+}
+.features-item:nth-child(2) .features-item-img-container {
+  order:1
+}
+
+.features-item-img-container {
+  align-items: center;
+  justify-content: center;
+  height: 256px;
+  overflow: hidden;
+}
+
+
+/* Сетка преимущества с h4 */
 .features-item-recommendations {
   display: flex;
-  flex-wrap:nowrap;
-  align-items: flex-end;
-  min-height: 330px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin:0;
+  list-style: none;
 
 }
 .features-item-recommendations li {
   flex-grow: 1;
   width: 33%;
+  padding-top: 158px;
+  padding-bottom: 84px;
+}
+.item-recommendations h4,
+.item-recommendations p {
+  margin: 0;
+}
+.item-recommendations h4 {
+  padding-bottom: 22px;
+}
+
+/* Последняя сетка преимуществ */
+.last-features {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin:0;
+  list-style: none;
+  width: 100%;
+  background-color: #eeeeee;
+}
+.last-features li {
+  flex-grow: 1;
+  width: 33%;
+}
+.last-features h3,
+.last-features p  {
+  margin: 0;
+}
+.last-features h3 {
+  padding-top:45px;
+  padding-bottom: 23px;
+}
+.last-features p {
+  padding-bottom: 23px;
+}
+.last-features p:last-child {
+  padding-bottom: 58px;
+}
+
+/* Сетка бронирования */
+.search {
+  width: 568px;
+  margin: 0 auto;
+  padding: 0;
+}
+.search h2,
+.search p {
+  margin-bottom: 0;
+}
+.search h2 {
+  margin-top: 46px;
+  padding-bottom: 27px;
+}
+.search p {
+  margin-top: 0px;
+  padding-bottom: 48px;
+  /* padding-bottom: 29px; */
 }
