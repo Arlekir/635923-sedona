@@ -150,7 +150,8 @@ a {
   background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
 }
-.booking .please {
+.booking .departure,
+.booking .arrival {
   font-size: 14px;
 }
 input.input-field {
@@ -506,9 +507,16 @@ input.days {
 .features-item-text-container h3 {
   padding-top:45px;
   padding-bottom: 23px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .features-item-text-container p {
   padding-bottom: 23px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+
   color: #ffffff;
 }
 .features-item-text-container p:last-child {
@@ -541,7 +549,7 @@ input.days {
 .features-item-recommendations li {
   flex-grow: 1;
   width: 33%;
-  padding-top: 158px;
+  margin-top: 158px;
   padding-bottom: 84px;
 }
 .item-recommendations h4,
@@ -550,6 +558,11 @@ input.days {
 }
 .item-recommendations h4 {
   padding-bottom: 22px;
+}
+.item-recommendations p {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Последняя сетка преимуществ */
@@ -571,14 +584,23 @@ input.days {
   margin: 0;
 }
 .last-features h3 {
-  padding-top:45px;
-  padding-bottom: 23px;
+  margin-top:44px;
+  padding-bottom: 22px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .last-features p {
   padding-bottom: 23px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .last-features p:last-child {
-  padding-bottom: 58px;
+  padding-bottom: 56px;
+}
+.features-item:last-child p:nth-child(3) {
+  width: 62%;
 }
 
 /* Сетка бронирования */
@@ -599,4 +621,55 @@ input.days {
   margin-top: 0px;
   padding-bottom: 48px;
   /* padding-bottom: 29px; */
+}
+
+/* Сетка для формы поиска */
+.search-form {
+  width: 458px;
+  height: 395px;
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 55px;
+  background-color: #123d42;
+
+}
+.appointment-form button{
+  margin-right: auto;
+  margin-left: auto;
+}
+.search-form  p {
+  margin: 0;
+}
+.arrival {
+  padding-right: 21px;
+}
+.departure {
+  padding-right: 17px;
+}
+.search-form input {
+  margin-bottom: 29px;
+}
+.search-form input:nth-child(1),
+.search-form input:nth-child(2) {
+  width: 281px;
+}
+.search-form input:nth-child(3),
+.search-form input:nth-child(4) {
+  width: 114px;
+}
+.line-input {
+  display: flex;
+  justify-content: flex-start;
+
+}
+.adulta-line-input label {
+  padding-right: 41px;
+}
+.adulta-line-input {
+  padding-right: 53px;
+}
+.children-line-input label{
+  padding-right: 27px;
 }
