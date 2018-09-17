@@ -11,29 +11,31 @@
 
 <body class= "catalog-page">
   <div class="general-background">
-  <header class="main-header">
-    <nav class="main-navigation">
-      <a class="main-header-logo" href="index.html">
-        <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип СЕДОНА">
-      </a>
-      <ul class="site-navigation">
-        <li>
-          <a href="#">Информация</a>
-        </li>
-        <li>
-          <a href="#">Фото и Видео</a>
-        </li>
-        <li>
-          <a href="#">Карта штата</a>
-        </li>
-        <li class="site-navigation-current">
-          <a class="current">Гостиницы</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main class="container">
+    <header class="main-header">
 
+      <nav class="main-navigation">
+        <a class="main-header-logo">
+        <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип СЕДОНА">
+        </a>
+        <ul class="site-navigation">
+          <li class="left-column">
+            <a href="#">Информация</a>
+          </li>
+          <li class="left-column indent">
+            <a href="#">Фото и Видео</a>
+          </li>
+          <li class="right-column">
+            <a href="#">Карта штата</a>
+          </li>
+          <li class="right-column">
+            <a class="current" href="catalog.html">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+
+    </header>
+
+  <main class="container">
     <div class="promo-catalog">
     <section class="filters">
       <h2 class="visually-hidden">Фильтр гостиниц</h2>
@@ -43,7 +45,7 @@
           <legend class="name-search">
             Инфаструктура:
           </legend>
-          <ul>
+          <ul class="list-option">
             <li class="filter-option">
               <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
                 <label for="filter-pool">
@@ -70,7 +72,7 @@
           <legend class="name-search">
             Тип жилья:
           </legend>
-          <ul>
+          <ul class="list-option">
             <li class="filter-option">
               <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel " id="filter-hotel" checked>
                 <label for="filter-hotel">
@@ -98,14 +100,14 @@
           </legend>
 
             <div class="filter-interval">
-              <label>
+              <!-- <label>
                 От
                 <input type="number" name="min-interval" value="0">
               </label>
               <label>
                 До
                 <input type="number" name="max-interval" value="3000">
-              </label>
+              </label> -->
             </div>
 
             <div class="filter-form">  <!--контейнеры для визуальной состовляющей кнопки выбора диапозона -->
@@ -123,10 +125,10 @@
                 </div>
               </div>
             </div>
+            <button type="submit" class="filter-button"> Показать </button>
 
         </fieldset>
 
-        <button type="submit" class="filter-button"> Показать </button>
       </form>
     </section>
   </div>
@@ -137,8 +139,8 @@
           Найдено: 3
         </p>
       </div>
-      <div class="sorting-results-center">
-        <ul>
+      <div>
+        <ul class="sorting-results-center">
           <li>
             Сортировка:
           </li>
@@ -157,73 +159,103 @@
         <a class="arrow-icon-down" href="#"> </a>
         <a class="arrow-icon-up" href="#"> </a>
       </div>
-
     </section>
+
     <section class="catalog">
       <h2 class="visually-hidden">Каталог гостиниц</h2>
       <ul class="catalog-list">
+
         <li class="catalog-item">
-          <h3 >
-            <a href="catalog-item" class="item-name">Amara Resort & Spa </a>
-          </h3>
-          <p class="catalog-item-image">
+
+          <div class="catalog-item-image">
             <a href="catalog-item.html">
                 <img src="img/1-hotel.jpg" alt="Гостиница Amara Resort & Spa" width="135" height="90">
               </a>
-          </p>
-          <p class="price-type">
+          </div>
+
+          <div class="catalog-item-info">
+
+          <h3 >
+            <a href="catalog-item" class="item-name">Amara Resort & Spa </a>
+          </h3>
+
+          <div class="price-type">
+          <p>
             Гостиница
           </p>
-          <p class="price-type">
+          <p>
              От 4000 ₽.
           </p>
+
+          </div>
           <a class="detail" href="#">Подробнее</a>
           <a class="button" href="#">Забронировать</a>
-          <p class="rating">
+          </div>
+
+          <div class="rating star">
             Рейтинг 8,5
-          </p>
+          </div>
         </li>
+
         <li class="catalog-item">
-          <h3>
-            <a href="catalog-item" class="item-name">Desert Quail Inn </a>
-          </h3>
-          <p class="catalog-item-image">
+
+          <div class="catalog-item-image">
             <a href="catalog-item.html">
                 <img src="img/2-hotel.jpg" alt="Мотель Desert Quail Inn" width="135" height="90">
               </a>
-          </p>
-          <p class="price-type">
+          </div>
+
+          <div class="catalog-item-info">
+          <h3>
+            <a href="catalog-item" class="item-name">Desert Quail Inn </a>
+          </h3>
+
+          <div class="price-type">
+          <p>
             Мотель
           </p>
-          <p class="price-type">
+          <p>
              От 3000 ₽.
           </p>
+        </div>
           <a class="detail" href="#">Подробнее</a>
           <a class="button" href="#">Забронировать</a>
-          <p class="rating">
+          </div>
+
+          <div class="rating star">
             Рейтинг 8,9
-          </p>
+          </div>
         </li>
+
         <li class="catalog-item">
-          <h3>
-            <a href="catalog-item" class="item-name">Villas At Poco Diablo </a>
-          </h3>
-          <p class="catalog-item-image">
+
+          <div class="catalog-item-image">
             <a href="catalog-item.html">
                 <img src="img/3-hotel.jpg" alt="Апартаменты Villas At Poco Diablo " width="135" height="90">
               </a>
-          </p>
-          <p class="price-type">
+          </div>
+
+          <div class="catalog-item-info">
+          <h3>
+            <a href="catalog-item" class="item-name">Villas At Poco Diablo </a>
+          </h3>
+
+          <div class="price-type">
+          <p>
             Апартаменты
           </p>
-          <p class="price-type">
-             От 2000 ₽.
+          <p>
+            От 2000 ₽.
           </p>
+        </div>
+
           <a class="detail" href="#">Подробнее</a>
           <a class="button" href="#">Забронировать</a>
-          <p class="rating">
+          </div>
+
+          <div class="rating star">
             Рейтинг 9,2
-          </p>
+          </div>
         </li>
       </ul>
     </section>
