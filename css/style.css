@@ -154,22 +154,22 @@ a {
 .booking .arrival {
   font-size: 14px;
 }
-input.input-field {
+.input-field {
   background-color: #f2f2f2;
   border: none;
   font-size: 14px;
   line-height: 26px;
-  width: 346px;
-  height: 38px;
+  width: 308px;
+  height: 36px;
   text-transform: uppercase;
 
 }
-input.input-field:hover,
-input.input-field:focus {
+.input-field:hover,
+.input-field:focus {
   background-color: #ebebeb;
   border: none;
 }
-input.input-field:focus {
+.input-field:focus {
   background-color: #ffffff;
 
 
@@ -180,7 +180,6 @@ input.input-field:focus {
   opacity: 1;
 }
 
-}
 input.days {
   width: 114px; /*тут будут иконки и размеры изменю */
   height: 38px;
@@ -469,10 +468,10 @@ input.days {
   left: 0px;
   display: block;
   width: 100%;
-  height: 59px;
-  background-image: url(../img/mask.png);
+  height: 58px;
+  background-image: url(../img/mask.svg);
   background-repeat: no-repeat;
-  background-size: 100% 59px;
+  background-size: 100% 58px;
 }
 .promo img {
   display: block;
@@ -502,6 +501,8 @@ input.days {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .features-item {
 
@@ -589,16 +590,16 @@ input.days {
   width: 100%;
   background-color: #eeeeee;
 }
-.last-features li {
+.last-features  {
   flex-grow: 1;
-  width: 33%;
+  width: 33.33%;
 }
 .last-features h3,
 .last-features p  {
   margin: 0;
 }
 .last-features h3 {
-  margin-top:44px;
+  margin-top: 41px;
   padding-bottom: 22px;
   width: 40%;
   margin-left: auto;
@@ -611,10 +612,7 @@ input.days {
   margin-right: auto;
 }
 .last-features p:last-child {
-  padding-bottom: 56px;
-}
-.features-item:last-child p:nth-child(3) {
-  width: 62%;
+  padding-bottom: 59px;
 }
 
 /* Сетка бронирования */
@@ -628,12 +626,12 @@ input.days {
   margin-bottom: 0;
 }
 .search h2 {
-  margin-top: 46px;
-  padding-bottom: 27px;
+  margin-top: 44px;
+  padding-bottom: 22px;
 }
 .search p {
   margin-top: 0px;
-  padding-bottom: 48px;
+  padding-bottom: 39px;
   /* padding-bottom: 29px; */
 }
 
@@ -642,12 +640,12 @@ input.days {
   position: relative;
   background-color: green;
   background-image: url(../img/map.png);
-  height: 473px;
+  height: 593px;
   background-position: center 0;
   background-size: cover;
   position: relative;
-
 }
+
 .search-form {
   width: 458px;
   height: 287px;
@@ -681,17 +679,15 @@ input.days {
 .departure {
   padding-right: 17px;
 }
-}
-.search-form input:nth-child(1),
-.search-form input:nth-child(2) {
-  width: 346px;
+.appointment-item .travel,
+.appointment-item .travel {
   height: 38px;
   padding-top: 0;
   padding-bottom:0;
 }
 .search-form input:nth-child(3),
 .search-form input:nth-child(4) {
-  width: 114px;
+  height: 38px;
   width: 38px;
   padding-top:0;
   padding-bottom:0;
@@ -709,8 +705,90 @@ input.days {
 .children-line-input label{
   padding-right: 27px;
 }
+.adulta-line-input p,
+.children-line-input p {
+  margin-bottom: 52px;
+}
+
+/*Cетка подвала  */
+.main-footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(254,254,254,.9);
+}
+.footer-hashtag {
+  padding-left: 126px;
+  margin-top: 45px;
+  padding-bottom: 49px;
+}
+.footer-social ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 150px;
+  padding: 0px;
+  margin: 0 auto;
+  margin-top: 36px;
+}
+.social-button {
+  display: flex;
+  position: relative;
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+  align-items: center;
+  justify-content: center;
+}
+.social-button:hover,
+.social-button:focus {
+  background-color: #669ec0;
+}
+.social-button:active {
+  background-color: #5496bd;
+}
+.social-button:active path {
+  opacity: 0.3;
+}
+
+.footer-copyright {
+  padding-right: 101px;
+  margin-top: 39px;
+  padding-bottom: 40px;
+}
+.footer-copyright p {
+  margin: 0;
+  padding-right: 8px;
+}
+.footer-copyright {
+  display: flex;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+}
+.html-academy {
+  display: flex;
+  width: 115px;
+  height: 41px;
+}
+.html-academy {
+  background-color: #ffffff;
+}
+.html-academy:hover path,
+.html-academy:focus path {
+  fill: #81b3d2;
+}
+.html-academy:active path {
+  fill: #bdbbbc;
+}
+
+
+
+
 /*Год спустя делаю иконки */
-.features-item-recommendations h4:first-child::before {
+.home-element::before {
   content: '';
   position: absolute;
   width: 75px;
@@ -720,39 +798,46 @@ input.days {
   background-image: url(../img/icon-1.svg);
   background-repeat: no-repeat;
 }
-.features-item-recommendations h4:nth-child(2)::before {
+.food-element::before {
   content: '';
   position: absolute;
-  width: 75px;
-  height: 72px;
-  bottom: 75px;
-  left: 41%;
-  background-image: url(../img/icon-2.svg);
-  background-repeat: no-repeat;
-}
-.features-item-recommendations h4:last-child::before {
-  content: '';
-  position: absolute;
-  width: 75px;
-  height: 72px;
+  width: 74px;
+  height: 70px;
   bottom: 75px;
   left: 41%;
   background-image: url(../img/icon-3.svg);
   background-repeat: no-repeat;
 }
+.souvenir-element::before {
+  content: '';
+  position: absolute;
+  width: 64px;
+  height: 76px;
+  bottom: 75px;
+  left: 41%;
+  background-image: url(../img/icon-2.svg);
+  background-repeat: no-repeat;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+button.icon-calendar {
+  margin: 0;
+  padding: 0;
+}
+.icon-calendar {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  background-color: #f2f2f2;
+  border: 0;
+  cursor: pointer;
+}
+.icon-calendar:hover path,
+.icon-calendar:focus path {
+  fill: #000000;
+}
+.icon-calendar:active path {
+  fill:#81b3d2;
+}
 
 
 
@@ -770,20 +855,39 @@ input.days {
 .btn-minus-icon::before {
   content: '';
   position: absolute;
-  width: 3px;
+  width: 12px;
   height: 3px;
-  background-color: red;
+  background-image: url(../img/grey-minus.png);
+  bottom: 17px;
+  left: 13px;
 }
+.btn-minus-icon:hover::before,
+.btn-minus-icon:focus::before {
+  background-image: url(../img/black-minus.png);
+}
+.btn-minus-icon:active::before {
+  background-image: url(../img/blue-minus.png);
+}
+
 .btn-plus-icon::before {
   content: '';
   position: absolute;
-  width: 3px;
-  height: 3px;
-  background-color: red;
+  width: 11px;
+  height: 11px;
+  background-image: url(../img/grey-plus.png);
+  bottom: 13px;
+  left: 14px;
+}
+.btn-plus-icon:hover::before,
+.btn-plus-icon:focus::before {
+  background-image: url(../img/black-plus.png);
+}
+.btn-plus-icon:active::before {
+  background-image: url(../img/blue-plus.png);
 }
 
 
-/* Сетка подвала */
+
 
 
 
