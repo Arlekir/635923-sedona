@@ -372,7 +372,6 @@ input.days {
 }
 .footer-copyright {
   text-align: center;
-  background-color: #ffffff;
 }
 .footer-copyright p {
   font-size: 14px;
@@ -632,7 +631,6 @@ input.days {
 .search p {
   margin-top: 0px;
   padding-bottom: 39px;
-  /* padding-bottom: 29px; */
 }
 
 /* Сетка для формы поиска */
@@ -715,14 +713,23 @@ input.days {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   margin: 0;
   padding: 0;
   background-color: rgba(254,254,254,.9);
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.over-map {
+  position: relative;
+  z-index: 1;
+  margin-top: -120px;
 }
 .footer-hashtag {
-  padding-left: 126px;
-  margin-top: 45px;
-  padding-bottom: 49px;
+  width: 33.33%;
+}
+.footer-social {
+  width: 33.33%;
 }
 .footer-social ul {
   display: flex;
@@ -731,7 +738,6 @@ input.days {
   width: 150px;
   padding: 0px;
   margin: 0 auto;
-  margin-top: 36px;
 }
 .social-button {
   display: flex;
@@ -753,18 +759,13 @@ input.days {
   opacity: 0.3;
 }
 
-.footer-copyright {
-  padding-right: 101px;
-  margin-top: 39px;
-  padding-bottom: 40px;
-}
 .footer-copyright p {
   margin: 0;
   padding-right: 8px;
 }
 .footer-copyright {
   display: flex;
-  width: 200px;
+  width: 33.33%;
   align-items: center;
   justify-content: center;
 }
@@ -773,9 +774,7 @@ input.days {
   width: 115px;
   height: 41px;
 }
-.html-academy {
-  background-color: #ffffff;
-}
+
 .html-academy:hover path,
 .html-academy:focus path {
   fill: #81b3d2;
@@ -885,7 +884,26 @@ button.icon-calendar {
 .btn-plus-icon:active::before {
   background-image: url(../img/blue-plus.png);
 }
-
+.sorting-results-right {
+  width: 34px;
+}
+.arrow-icon-up {
+  /* padding-right: 10px; */
+}
+.arrow-icon-up:hover path,
+.arrow-icon-up:focus path {
+  fill: #000000;
+}
+.arrow-icon-up:active path{
+  fill: #81b3d2;
+}
+.arrow-icon-down:hover path,
+.arrow-icon-down:focus path {
+  fill: #000000;
+}
+.arrow-icon-down:active path{
+  fill: #81b3d2;
+}
 
 
 
@@ -901,31 +919,223 @@ button.icon-calendar {
   padding-bottom: 30px;
   padding-top: 26px;
 }
-.list-option li:first-child,
-.list-option li:nth-child(2) {
+.filter-checkboxes li:first-child,
+.filter-checkboxes li:nth-child(2) {
   padding-bottom: 27px;
 }
 
 .filter fieldset:first-child {
-  width: 265px;
+  width: 204px;
+  margin-right: 50px;
 }
 .filter fieldset:nth-child(2) {
   width: 485px;
 }
 
-.list-option {
+.filter-checkboxes {
   padding-left: 0px;
   margin: 0;
-}
-.filter fieldset:last-child {
-  ;
 }
 .name-search {
   padding-bottom: 24px;
 }
+.filter-range {
+  margin-right: 0;
+  margin-left: auto;
+}
+ /*Красивые чекбоксы  */
+ .visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
+.filter-checkbox + label {
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+}
 
+.filter-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
 
+.filter-checkbox:checked + label::before {
+  width: 27px;
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.filter-checkbox:disabled + label {
+  color: #6a6a6a;
+}
+
+.filter-checkbox:disabled + label::before {
+  background-image: url("../img/checkbox-disabled-off.png");
+}
+
+.filter-checkbox:checked:disabled + label::before {
+  width: 27px;
+  background-image: url("../img/checkbox-disabled-on.png");
+}
+
+.filter-checkbox:focus + label::before {
+  outline: 1px dashed #ffffff;
+  outline-offset: 2px;
+}
+
+/*Сложный фильтр  */
+.filter-range {
+  width: 315px;
+  margin-left: auto;
+  margin-right: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+  font-weight: 400;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
 
 
 /* Сетка для сортировки */
@@ -965,7 +1175,7 @@ button.icon-calendar {
 .catalog-list {
   padding:0;
   margin:0;
-  padding: 29px 6%;
+  padding: 29px 6% 0px;
 
 }
 .catalog-item {
@@ -974,7 +1184,7 @@ button.icon-calendar {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center ;
-  padding-bottom: 30px;
+  padding-bottom: 28px;
   border-bottom: 1px solid #e5e5e5;
 }
 .catalog-list .catalog-item:nth-child(2),
@@ -983,15 +1193,23 @@ button.icon-calendar {
 
 }
 .catalog-item .catalog-item-image {
-  padding-top: ;
   margin-right: 30px;
 }
+.catalog-item-image a {
+  width: 0px;
+  height: 0px;
+  line-height: 0;
+}
+.catalog-item-image img {
+  vertical-align:middle;
+}
+
 .catalog-item .catalog-item-info {
-  margin-right: 500px;
+  margin-right: auto;
 }
 .catalog-item-info h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
+  margin: -8px 0 4px;
+  padding: 0;
 }
 .price-type {
   display: flex;
@@ -1006,4 +1224,20 @@ button.icon-calendar {
 }
 .detail {
   margin-right: 6px;
+}
+.rating {
+  align-self: flex-end;
+}
+.rating p:last-child {
+  margin: 0;
+  /* padding-top: 43px;  */
+}
+.star {
+  display: inline-block;
+  background-image: url(../img/star.svg);
+  background-repeat: space;
+  width: 80px;
+  height: 18px;
+  background-color: #ffffff;
+  margin: 0;
 }
