@@ -336,10 +336,6 @@ input.days {
   font-weight: 400;
   line-height: 21px;
   width: 110px;
-  background-color: #f2f2f2;
-  text-align: center;
-  padding-top: 3px;
-  padding-bottom: 3px;
 
 }
 .footer-hashtag {
@@ -409,6 +405,7 @@ input.days {
 }
 .main-navigation {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
 }
@@ -661,6 +658,7 @@ input.days {
 }
 .appointment-item {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   position: relative;
 }
@@ -711,6 +709,7 @@ input.days {
 /*Cетка подвала  */
 .main-footer {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -741,6 +740,7 @@ input.days {
 }
 .social-button {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   width: 46px;
   height: 48px;
@@ -770,7 +770,7 @@ input.days {
   justify-content: center;
 }
 .html-academy {
-  display: flex;
+  display: block;
   width: 115px;
   height: 41px;
 }
@@ -885,10 +885,10 @@ button.icon-calendar {
   background-image: url(../img/blue-plus.png);
 }
 .sorting-results-right {
-  width: 34px;
+  width: 36px;
 }
 .arrow-icon-up {
-  /* padding-right: 10px; */
+ margin-right: 10px;
 }
 .arrow-icon-up:hover path,
 .arrow-icon-up:focus path {
@@ -913,6 +913,7 @@ button.icon-calendar {
 /* Сетка для фильтров к каталогу */
 .filter {
   display: flex;
+  flex-wrap:wrap;
   justify-content: flex-start;
   padding-right: 6%;
   padding-left: 6%;
@@ -1141,10 +1142,12 @@ input[type='radio'].visually-hidden {
 /* Сетка для сортировки */
 .sorting {
   display:flex;
+  flex-wrap: wrap;
   align-items: baseline;
   margin: 0;
   padding: 29px 6%;
   border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 30px;
 }
 .sorting p {
   margin: 0;
@@ -1164,36 +1167,38 @@ input[type='radio'].visually-hidden {
 }
 .sorting-results-center li:nth-child(2),
 .sorting-results-center li:nth-child(3) {
-  padding-right: 33px;
+  padding-right: 30px;
 }
 .sorting-results-center li:last-child {
-  margin-right: 505px;
+  margin-right: 504px;
 }
 
 
 /*  Сетка для каталога*/
 .catalog-list {
-  padding:0;
-  margin:0;
-  padding: 29px 6% 0px;
+  padding: 0;
+  margin: 0;
 
+}
+.catalog li {
+  list-style: none;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 25px;
+  box-sizing: border-box;
 }
 .catalog-item {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center ;
-  padding-bottom: 28px;
+  align-items: flex-start ;
+  padding-bottom: 30px;
   border-bottom: 1px solid #e5e5e5;
-}
-.catalog-list .catalog-item:nth-child(2),
-.catalog-list .catalog-item:nth-child(3) {
-  padding-top: 30px;
-
 }
 .catalog-item .catalog-item-image {
   margin-right: 30px;
+  margin-top: 5px;
 }
 .catalog-item-image a {
   width: 0px;
@@ -1208,7 +1213,7 @@ input[type='radio'].visually-hidden {
   margin-right: auto;
 }
 .catalog-item-info h3 {
-  margin: -8px 0 4px;
+  margin: 0 0 7px;
   padding: 0;
 }
 .price-type {
@@ -1224,13 +1229,18 @@ input[type='radio'].visually-hidden {
 }
 .detail {
   margin-right: 6px;
+
 }
 .rating {
-  align-self: flex-end;
+  text-align: right;
 }
 .rating p:last-child {
   margin: 0;
-  /* padding-top: 43px;  */
+  margin-top: 44px;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 .star {
   display: inline-block;
@@ -1240,4 +1250,10 @@ input[type='radio'].visually-hidden {
   height: 18px;
   background-color: #ffffff;
   margin: 0;
+}
+.star.three {
+  width: 60px;
+}
+.star.two {
+  width: 40px;
 }
