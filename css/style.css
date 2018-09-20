@@ -408,9 +408,10 @@ input.days {
 
  .general-background {
   display: block;
-  max-width: 1200px;
+  width: 1200px;
+  /* max-width: 1200px;
   width: 100%;
-  min-width: 768px;
+  min-width: 768px; */
   margin-left: auto;
   margin-right: auto;
   -webkit-box-shadow: 0px -5px 12px rgba(0, 1, 1, 0.2);
