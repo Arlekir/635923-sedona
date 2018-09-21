@@ -557,10 +557,11 @@ input.days {
 }
 .features-item-text-container h3 {
   padding-top:45px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+  line-height: 21px;
 }
 .features-item-text-container p {
   padding-bottom: 20px;
