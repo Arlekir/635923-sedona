@@ -786,7 +786,6 @@ p.special-width {
   height: 593px;
   background-position: center 0;
   background-size: cover;
-  position: relative;
 }
 
 .search-form {
@@ -1505,3 +1504,25 @@ input[type='radio'].visually-hidden {
 .star.two {
   width: 40px;
 }
+.search-form {
+  display: none;
+}
+@keyframes bang {
+  0% {transform: translateY(-28px);}
+  60% {transform: translateY(10px);}
+  100% {transform: translateY(0px);}
+}
+.modal-show {
+  position: absolute;
+  display: block;
+  animation-name: bang;
+  animation-duration: 0.6s;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  top: 0;
+  left: 26.4%;
+}
+
+/* .interactive-map {
+  position: relative;
+  background-size: cover;
+} */
