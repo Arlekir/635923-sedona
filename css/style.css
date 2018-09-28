@@ -151,6 +151,7 @@ a {
 }
 
 .button-search {
+  display: block;
   font: inherit;
   font-size: 21px;
   line-height: 26px;
@@ -159,7 +160,10 @@ a {
   color: #ffffff;
   border: none;
   width: 568px;
-  height: 86px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #766357;
 }
 
@@ -505,6 +509,8 @@ input.days {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -638,7 +644,7 @@ input.days {
 }
 
 .features-item-text-container p:last-child {
-  padding-bottom: 0px;
+  padding-bottom: 20px;
 }
 
 .features-item:nth-child(2) .features-item-text-container {
@@ -1124,12 +1130,11 @@ button.icon-calendar {
   justify-content: flex-start;
   padding-right: 6%;
   padding-left: 6%;
-  padding-bottom: 30px;
+  padding-bottom: 3px;
   padding-top: 26px;
 }
 
-.filter-checkboxes li:first-child,
-.filter-checkboxes li:nth-child(2) {
+.filter-checkboxes li {
   padding-bottom: 27px;
 }
 
@@ -1265,9 +1270,11 @@ input[type='radio'].visually-hidden {
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
-  padding-left: 59px;
+  width: 131px;
+  padding-left: 0px;
+  text-align: right;
   padding-top: 6px;
+  margin-right: 20px;
 }
 
 .price-controls input {
@@ -1365,6 +1372,7 @@ input[type='radio'].visually-hidden {
 .sorting p {
   margin: 0;
   margin-right: 50px;
+  max-width: 117px;
 }
 
 .sorting-results-center {
@@ -1442,6 +1450,7 @@ input[type='radio'].visually-hidden {
 
 .catalog-item .catalog-item-info {
   margin-right: auto;
+  max-width: 700px;
 }
 
 .catalog-item-info h3 {
@@ -1478,7 +1487,7 @@ input[type='radio'].visually-hidden {
 
 .rating p:last-child {
   margin: 0;
-  margin-top: 41px;
+  margin-top: 45px;
   background-color: #f2f2f2;
   text-align: center;
   padding-top: 3px;
@@ -1494,7 +1503,7 @@ input[type='radio'].visually-hidden {
   background-color: #ffffff;
   margin: 0;
   margin-top: 3px;
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 .star.three {
@@ -1509,18 +1518,27 @@ input[type='radio'].visually-hidden {
   display: none;
 }
 
+@-webkit-keyframes bang {
+  0% {-webkit-transform: translateY(-28px);transform: translateY(-28px);}
+  60% {-webkit-transform: translateY(10px);transform: translateY(10px);}
+  100% {-webkit-transform: translateY(0px);transform: translateY(0px);}
+}
+
 @keyframes bang {
-  0% {transform: translateY(-28px);}
-  60% {transform: translateY(10px);}
-  100% {transform: translateY(0px);}
+  0% {-webkit-transform: translateY(-28px);transform: translateY(-28px);}
+  60% {-webkit-transform: translateY(10px);transform: translateY(10px);}
+  100% {-webkit-transform: translateY(0px);transform: translateY(0px);}
 }
 
 .modal-show {
   position: absolute;
   display: block;
-  animation-name: bang;
-  animation-duration: 0.6s;
-  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  -webkit-animation-name: bang;
+          animation-name: bang;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+          box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
   top: 0%;
   left: 26.4%;
 }
@@ -1532,12 +1550,21 @@ input[type='radio'].visually-hidden {
   width: 100%;
 }
 
-@keyframes shake {
-  0%, 100% {transform: translateY(0);}
-  10%, 30%, 50%, 70%, 90% {transform: translateY(-10px);}
-  20%, 40%, 60%, 80% {transform: translateY(0);}
+@-webkit-keyframes shake {
+  0%, 100% {-webkit-transform: translateY(0);transform: translateY(0);}
+  10%, 30%, 50%, 70%, 90% {-webkit-transform: translateY(-10px);transform: translateY(-10px);}
+  20%, 40%, 60%, 80% {-webkit-transform: translateY(0);transform: translateY(0);}
 }
+
+@keyframes shake {
+  0%, 100% {-webkit-transform: translateY(0);transform: translateY(0);}
+  10%, 30%, 50%, 70%, 90% {-webkit-transform: translateY(-10px);transform: translateY(-10px);}
+  20%, 40%, 60%, 80% {-webkit-transform: translateY(0);transform: translateY(0);}
+}
+
 .modal-error {
-  animation-name: shake;
-  animation-duration: 0,6s;
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
 }

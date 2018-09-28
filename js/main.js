@@ -6,7 +6,6 @@ sad.addEventListener("click", function(evt){
   evt.preventDefault();
   popup.classList.toggle("modal-show");
   popup.classList.remove("modal-error");
-
 });
 
 var form = document.querySelector(".appointment-form");
